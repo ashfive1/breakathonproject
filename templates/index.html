@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Decentralized Task Platform</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to TaskFlow</h1>
+        <p>Your Decentralized Task Matchmaking Platform</p>
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <p>TaskFlow connects firms with freelancers using advanced machine learning algorithms for task matchmaking. Post your tasks and let us handle the rest!</p>
+
+        <div class="flowchart">
+            <h3>How It Works:</h3>
+            <img src="{{ url_for('static', filename='images/flowchart.png') }}" alt="Flowchart" style="width: 100%; max-width: 600px;">
+        </div>
+
+        <h3>Most Suggested Tasks</h3>
+        <ul>
+            <li>Web Development</li>
+            <li>Graphic Design</li>
+            <li>Data Analysis</li>
+            <li>AI Model Training</li>
+        </ul>
+
+        <h3>Testimonials</h3>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"TaskFlow made hiring a freelancer so simple!" - Alex R.</p>
+            </div>
+            <div class="testimonial">
+                <p>"The matchmaking algorithm is spot on!" - Priya S.</p>
+            </div>
+        </div>
+
+        <h3>About the Developers</h3>
+        <p>This platform was created with love by a team of passionate developers for the Break-a-thon event.</p>
+    </section>
+
+    <section class="navigation-buttons">
+        <h3>Navigate</h3>
+        <button onclick="location.href='{{ url_for('post_task') }}'">Post a Task</button>
+        <button onclick="location.href='{{ url_for('view_tasks') }}'">View Tasks</button>
+        <button onclick="location.href='{{ url_for('profile') }}'">Your Profile</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TaskFlow. All rights reserved.</p>
+    </footer>
+</body>
+</html>

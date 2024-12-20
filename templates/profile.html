@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h1>Create Your Freelancer Profile</h1>
+    <form action="/profile" method="POST">
+        <label for="experience">Experience:</label>
+        <select name="experience" id="experience" required>
+            <option value="Internships">Internships</option>
+            <option value="3 years">3 years</option>
+            <option value="5 years">5 years</option>
+            <option value="6 years">6 years</option>
+        </select><br><br>
+
+        <label for="availability">Availability:</label>
+        <select name="availability" id="availability" required>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Remote">Remote</option>
+            <option value="Hour-wise">Hour-wise</option>
+        </select><br><br>
+
+        <label for="qualification">Qualification:</label>
+        <select name="qualification" id="qualification" required>
+            <option value="Bachelor's">Bachelor's</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Master's">Master's</option>
+            <option value="Scholar">Scholar</option>
+        </select><br><br>
+
+        <label for="domain">Domain:</label>
+        <select name="domain" id="domain" required>
+            <option value="Data Analytics/Clinical Data">Data Analytics/Clinical Data</option>
+            <option value="Graphic Design/Data Management">Graphic Design/Data Management</option>
+            <option value="Machine Learning/AI Development">Machine Learning/AI Development</option>
+            <option value="Web Development/Software Engineering">Web Development/Software Engineering</option>
+        </select><br><br>
+
+        <button type="submit">Save Profile</button>
+    </form>
+</body>
+</html>

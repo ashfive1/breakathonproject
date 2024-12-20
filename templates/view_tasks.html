@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Tasks</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h1>Available Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <strong>Job Title:</strong> {{ task.Job_Title }}<br>
+            <strong>Job Type:</strong> {{ task.Job_Type }}<br>
+            <strong>Experience Level:</strong> {{ task.Experience_Level }}<br>
+            <strong>Location:</strong> {{ task.Location }}<br>
+            <strong>Requirement:</strong> {{ task.Requirement }}<br>
+            <strong>Facilities:</strong> {{ task.Facilities }}<br>
+            <hr>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Post a Task</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h1>Post a New Task</h1>
+    <form action="/post_task" method="POST">
+        <label>Job Title:</label>
+        <input type="text" name="job_title" required><br>
+        <label>Job Type:</label>
+        <input type="text" name="job_type" required><br>
+        <label>Experience Level:</label>
+        <input type="text" name="experience_level" required><br>
+        <label>Location:</label>
+        <input type="text" name="location" required><br>
+        <label>Requirement:</label>
+        <textarea name="requirement" required></textarea><br>
+        <label>Facilities:</label>
+        <textarea name="facilities" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
